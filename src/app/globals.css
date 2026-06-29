@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-charcoal: #202020;
+    --color-steel: #355c7d;
+    --color-ink: #2c2c2c;
+    --color-mist: #f5f5f5;
+  }
+
+  * {
+    @apply border-black/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  body {
+    @apply bg-white font-body text-ink antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-charcoal;
+  }
+
+  ::selection {
+    @apply bg-steel/15 text-charcoal;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-steel ring-offset-2 ring-offset-white;
+  }
+}
+
+@layer components {
+  .container-grid {
+    @apply mx-auto w-full max-w-container px-6 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply font-heading text-xs font-semibold uppercase tracking-eyebrow text-steel;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-2 text-sm font-medium text-charcoal transition-colors hover:text-steel;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .hairline {
+    @apply border-t border-black/10;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
