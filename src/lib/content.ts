@@ -163,12 +163,24 @@ export const gallery: GalleryItem[] = [
     span: "tall",
   },
   {
+    image: img("gallery/gallery-hardware-shelves.jpg"),
+    alt: "Metal hardware and decorative steel stocked on warehouse shelving",
+  },
+  {
     image: img("warehouse-beams.jpg"),
     alt: "Steel sections stored in a warehouse interior",
   },
   {
+    image: img("gallery/gallery-corrugated-sheets.jpg"),
+    alt: "Profiled metal roofing sheets stacked at the yard",
+  },
+  {
     image: img("steel-frame.jpg"),
     alt: "Steel frame structure under construction",
+  },
+  {
+    image: img("gallery/gallery-angle-bars.jpg"),
+    alt: "MS angles and square bars bundled for dispatch",
   },
   {
     image: img("forklift-truck.jpg"),
@@ -176,13 +188,25 @@ export const gallery: GalleryItem[] = [
     span: "wide",
   },
   {
+    image: img("gallery/gallery-pipes-rack.jpg"),
+    alt: "Square and round MS pipes arranged on storage racks",
+  },
+  {
     image: img("welder-sparks.jpg"),
     alt: "Industrial fabrication with welding sparks",
+  },
+  {
+    image: img("gallery/gallery-warehouse-stock.jpg"),
+    alt: "Warehouse interior stocked with metal supplies and hardware",
   },
   {
     image: img("beams-aerial.jpg"),
     alt: "Structural steel beams viewed from above",
     span: "tall",
+  },
+  {
+    image: img("gallery/gallery-hpl-panels.jpg"),
+    alt: "HPL cladding panels stored at the distribution yard",
   },
   {
     image: img("welding-bw.jpg"),
@@ -277,6 +301,6 @@ export const faqs: Faq[] = [
   {
     question: "What are your business hours?",
     answer:
-      "We are open Monday to Saturday, 9:00 AM to 7:00 PM. We are closed on Sundays. You can reach us by phone or email during business hours.",
+      "We are open every day from 9:00 AM to 8:00 PM. You can reach us by phone or email during business hours.",
   },
 ];

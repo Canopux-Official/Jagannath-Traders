@@ -6,9 +6,7 @@ import { ContactForm } from "./ContactForm";
 import { site } from "@/lib/site";
 
 export function Contact() {
-  const mapsQuery = encodeURIComponent(
-    `${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`,
-  );
+  const mapsQuery = `${site.coordinates.lat},${site.coordinates.lng}`;
 
   return (
     <section id="contact" className="bg-white py-section">
@@ -92,7 +90,7 @@ export function Contact() {
           <div className="relative aspect-[21/9] w-full overflow-hidden rounded-sm border border-black/10 bg-mist">
             <iframe
               title={`Map showing ${site.name}`}
-              src={`https://maps.google.com/maps?q=${mapsQuery}&z=13&output=embed`}
+              src={`https://maps.google.com/maps?q=${mapsQuery}&z=16&output=embed`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="h-full w-full grayscale-[0.3]"

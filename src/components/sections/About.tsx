@@ -28,7 +28,7 @@ export function About() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden rounded-sm bg-charcoal px-8 py-7 text-white shadow-lift sm:block">
-              <p className="font-heading text-4xl font-extrabold">15+</p>
+              <p className="font-heading text-4xl font-extrabold">10+</p>
               <p className="mt-1 text-sm text-white/60">Years serving Odisha</p>
             </div>
           </Reveal>

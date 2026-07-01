@@ -59,7 +59,21 @@ export function ContactForm() {
           <label htmlFor="phone" className={fieldLabel}>
             Phone
           </label>
-          <input id="phone" name="phone" type="tel" required placeholder="+91" className={inputBase} />
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            inputMode="numeric"
+            required
+            placeholder="10-digit mobile number"
+            maxLength={10}
+            pattern="[0-9]{10}"
+            title="Enter a 10-digit mobile number"
+            className={inputBase}
+            onInput={(e) => {
+              e.currentTarget.value = e.currentTarget.value.replace(/\D/g, "");
+            }}
+          />
         </div>
       </div>
 

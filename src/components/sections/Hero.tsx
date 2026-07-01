@@ -198,7 +198,7 @@ export function Hero() {
               <div className="flex items-center gap-2.5">
                 <Clock className="h-4 w-4 shrink-0 text-steel-light" strokeWidth={1.75} />
                 <dt className="sr-only">Business hours</dt>
-                <dd>Mon – Sat · 9:00 AM – 7:00 PM</dd>
+                <dd>Everyday · {site.hours[0].time}</dd>
               </div>
             </dl>
 

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -9,6 +9,13 @@ const manrope = Manrope({
   display: "swap",
   variable: "--font-manrope",
   weight: ["500", "600", "700", "800"],
+});
+
+const notoDevanagari = Noto_Sans_Devanagari({
+  subsets: ["devanagari"],
+  display: "swap",
+  variable: "--font-devanagari",
+  weight: ["600", "700"],
 });
 
 const inter = Inter({
@@ -69,7 +76,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable} ${notoDevanagari.variable}`}>
       <body>
         <JsonLd />
         <a

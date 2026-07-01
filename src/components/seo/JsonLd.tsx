@@ -21,6 +21,11 @@ export function JsonLd() {
       postalCode: site.address.postalCode,
       addressCountry: site.address.country,
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: site.coordinates.lat,
+      longitude: site.coordinates.lng,
+    },
     areaServed: {
       "@type": "State",
       name: "Odisha",
@@ -35,9 +40,10 @@ export function JsonLd() {
           "Thursday",
           "Friday",
           "Saturday",
+          "Sunday",
         ],
         opens: "09:00",
-        closes: "19:00",
+        closes: "20:00",
       },
     ],
   };

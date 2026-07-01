@@ -47,7 +47,7 @@ export function Navbar() {
           aria-label={`${site.name} home`}
           onClick={() => setOpen(false)}
         >
-          <Logo tone={solid ? "dark" : "light"} />
+          <Logo tone={solid ? "dark" : "light"} variant="navbar" />
         </Link>
 
         <ul className="hidden items-center gap-9 lg:flex">
