@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Linkedin, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Youtube, MapPin, Phone, Mail, FileText } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { navLinks, site } from "@/lib/site";
@@ -18,7 +18,7 @@ export function Footer() {
       <Container className="py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <Logo tone="light" />
+            <Logo tone="light" variant="brand" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               Trusted supplier of premium steel products serving builders,
               contractors and industries across Odisha since {site.founded}.
@@ -105,6 +105,13 @@ export function Footer() {
                     <Mail className="h-4 w-4 shrink-0 text-steel-light" strokeWidth={1.75} />
                     {site.email}
                   </a>
+                </li>
+                <li className="flex gap-3">
+                  <FileText className="mt-0.5 h-4 w-4 shrink-0 text-steel-light" strokeWidth={1.75} />
+                  <span>
+                    <span className="text-white/50">GSTIN:</span>{" "}
+                    <span className="font-mono tracking-wide">{site.gstin}</span>
+                  </span>
                 </li>
               </ul>
             </div>

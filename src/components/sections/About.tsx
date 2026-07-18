@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { aboutImage } from "@/lib/content";
+import { site } from "@/lib/site";
 
 const commitments = [
   "Years of trust built on consistency",
@@ -28,7 +29,7 @@ export function About() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden rounded-sm bg-charcoal px-8 py-7 text-white shadow-lift sm:block">
-              <p className="font-heading text-4xl font-extrabold">10+</p>
+              <p className="font-heading text-4xl font-extrabold">6+</p>
               <p className="mt-1 text-sm text-white/60">Years serving Odisha</p>
             </div>
           </Reveal>
@@ -48,8 +49,8 @@ export function About() {
             <Reveal delay={0.1}>
               <p className="mt-6 text-base leading-relaxed text-ink/70 text-pretty sm:text-lg">
                 Sri Jagannath Traders has supplied premium steel to the
-                construction and industrial sector across Bhadrak and Odisha for
-                over a decade. We combine deep mill relationships with a
+                construction and industrial sector across Bhadrak and Odisha since{" "}
+                {site.founded}. We combine deep mill relationships with a
                 disciplined approach to quality, stock and logistics — so your
                 project never waits on material.
               </p>

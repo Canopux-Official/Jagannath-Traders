@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, FileText } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -62,6 +62,18 @@ export function Contact() {
               </Reveal>
 
               <Reveal as="div" delay={0.15} className="flex gap-4">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-sm border border-black/10 text-steel">
+                  <FileText className="h-5 w-5" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <dt className="font-heading text-sm font-bold text-charcoal">GSTIN</dt>
+                  <dd className="mt-1 font-mono text-sm tracking-wide text-ink/65">
+                    {site.gstin}
+                  </dd>
+                </div>
+              </Reveal>
+
+              <Reveal as="div" delay={0.2} className="flex gap-4">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-sm border border-black/10 text-steel">
                   <Clock className="h-5 w-5" strokeWidth={1.75} />
                 </span>

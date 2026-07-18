@@ -18,11 +18,11 @@ export default function HomePage() {
       <Navbar />
       <main id="main">
         <Hero />
+        <Brands />
         <About />
         <Products />
         <WhyChooseUs />
         <Industries />
-        <Brands />
         <Gallery />
         <Process />
         <Testimonials />

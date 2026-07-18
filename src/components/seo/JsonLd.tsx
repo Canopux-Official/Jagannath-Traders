@@ -13,6 +13,7 @@ export function JsonLd() {
     email: site.email,
     priceRange: "₹₹",
     foundingDate: String(site.founded),
+    taxID: site.gstin,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,

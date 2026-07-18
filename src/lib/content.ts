@@ -39,46 +39,60 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    title: "TMT Bars",
-    description: "High-strength reinforcement bars in all standard grades and sizes.",
-    image: img("rebar.jpg"),
-    alt: "Bundled TMT reinforcement steel bars",
+    title: "Stainless Steel",
+    description:
+      "Pipes and sheets in Grade 202 and Grade 304 for durable fabrication, kitchen and industrial use.",
+    image: img("pipes.jpg"),
+    alt: "Stainless steel pipes and sections in stock",
   },
   {
-    title: "Structural Steel",
-    description: "Heavy structural sections engineered for load-bearing frameworks.",
+    title: "ACP Sheets",
+    description:
+      "Aluminium composite panels for cladding, signage and modern building façades.",
+    image: img("gallery/gallery-hpl-panels.jpg"),
+    alt: "ACP and cladding panels stored at the yard",
+  },
+  {
+    title: "GI Pipes",
+    description:
+      "Galvanised iron pipes for water lines, scaffolding and structural applications.",
+    image: img("gallery/gallery-pipes-rack.jpg"),
+    alt: "GI and steel pipes stacked on storage racks",
+  },
+  {
+    title: "Structural Angles",
+    description:
+      "Equal and unequal angles for framing, fabrication and support structures.",
+    image: img("gallery/gallery-angle-bars.jpg"),
+    alt: "Structural steel angles bundled for dispatch",
+  },
+  {
+    title: "Structural Channels",
+    description:
+      "Precision-rolled channels for durable industrial and building frameworks.",
     image: img("warehouse-beams.jpg"),
-    alt: "Structural steel sections stacked at a warehouse",
+    alt: "Structural channels and steel sections in storage",
+  },
+  {
+    title: "GP Sheets",
+    description:
+      "Galvanised plain sheets for roofing, ducting, fabrication and industrial use.",
+    image: img("gallery/gallery-warehouse-stock.jpg"),
+    alt: "Galvanised steel sheets in warehouse stock",
+  },
+  {
+    title: "Roofing Sheets",
+    description:
+      "Profiled roofing sheets for residential, commercial and industrial buildings.",
+    image: img("gallery/gallery-corrugated-sheets.jpg"),
+    alt: "Corrugated roofing sheets stacked at the yard",
   },
   {
     title: "MS Pipes",
-    description: "Mild steel pipes for plumbing, scaffolding and fabrication.",
-    image: img("pipes.jpg"),
-    alt: "Mild steel pipes arranged in a geometric pattern",
-  },
-  {
-    title: "MS Channels",
-    description: "Precision-rolled channels for durable industrial structures.",
-    image: img("beams-aerial.jpg"),
-    alt: "Steel channel and beam sections viewed from above",
-  },
-  {
-    title: "Angles",
-    description: "Equal and unequal angles for framing and support work.",
+    description:
+      "Mild steel pipes for plumbing, scaffolding, fabrication and general construction.",
     image: img("steel-bars-yard.jpg"),
-    alt: "Stacked steel angle and bar sections in a yard",
-  },
-  {
-    title: "Beams",
-    description: "I-beams and H-beams for large-span construction projects.",
-    image: img("steel-frame.jpg"),
-    alt: "Steel beams in a building framework",
-  },
-  {
-    title: "Binding Wire",
-    description: "Annealed binding wire for secure rebar tying on site.",
-    image: img("wire-coil.jpg"),
-    alt: "Coiled steel binding wire",
+    alt: "Mild steel pipes and sections at the steel yard",
   },
 ];
 
@@ -141,14 +155,18 @@ export const industries: Industry[] = [
   { title: "Fabrication", icon: Hammer },
 ];
 
-export const brands = [
-  "TATA Steel",
-  "JSW",
-  "SAIL",
-  "Jindal",
-  "Vizag Steel",
-  "Shyam Steel",
-] as const;
+export type Brand = {
+  name: string;
+  logo: string;
+};
+
+export const brands: Brand[] = [
+  { name: "JSW Steel", logo: "/images/gallery/JSW-logo.png" },
+  { name: "JSPL", logo: "/images/gallery/JSPL-logo.png" },
+  { name: "VIVA", logo: "/images/gallery/Viva-logo.png" },
+  { name: "HMB", logo: "/images/gallery/HMB-logo.png" },
+  { name: "JSL Stainless", logo: "/images/gallery/JSL-Stainless-logo.png" },
+];
 
 export type GalleryItem = {
   image: string;
@@ -291,7 +309,7 @@ export const faqs: Faq[] = [
   {
     question: "Which steel products do you stock?",
     answer:
-      "We supply TMT bars, structural steel, MS pipes, MS channels, angles, beams and binding wire in all standard grades and sizes. For specific specifications, please contact us.",
+      "We supply stainless steel pipes and sheets (Grade 202 & 304), ACP sheets, GI pipes, structural angles, structural channels, GP sheets, roofing sheets and MS pipes. For specific sizes and grades, please contact us.",
   },
   {
     question: "How is pricing determined?",

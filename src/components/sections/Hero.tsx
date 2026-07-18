@@ -18,9 +18,10 @@ const fadeUp = {
 };
 
 const featured = [
-  { index: "01", name: "TMT Bars", note: "Reinforcement steel" },
-  { index: "02", name: "MS Pipes", note: "Tubular sections" },
-  { index: "03", name: "Structural Steel", note: "Beams · Channels · Angles" },
+  { index: "01", name: "Stainless Steel", note: "Grade 202 · Grade 304" },
+  { index: "02", name: "GI & MS Pipes", note: "Tubular sections" },
+  { index: "03", name: "Roofing & Sheets", note: "GP · ACP · Roofing" },
+  { index: "04", name: "Structural Angles & Channels", note: "Framing & fabrication" },
 ];
 
 const expertise = [
@@ -84,7 +85,7 @@ export function Hero() {
               animate="show"
               className="mt-7 max-w-xl text-lg leading-relaxed text-white/75 text-pretty"
             >
-              For over a decade, Sri Jagannath Traders has supplied dependable,
+              Since {site.founded}, Sri Jagannath Traders has supplied dependable,
               certified steel to the projects shaping Odisha — combining deep mill
               relationships with disciplined logistics and a standard of service
               that builders return to.

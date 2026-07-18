@@ -5,20 +5,20 @@ type LogoProps = {
   className?: string;
   /** Adjusts wordmark colour for light or dark backgrounds. */
   tone?: "dark" | "light";
-  /** Display typography for the navbar wordmark only. */
-  variant?: "default" | "navbar";
+  /** Brand wordmark layout — header and footer. */
+  variant?: "default" | "brand";
 };
 
 const toneTransition = "transition-colors duration-300 ease-smooth";
 
 /**
- * Navbar wordmark — same type system as the site (Manrope + Devanagari),
+ * Brand wordmark — same type system as the site (Manrope + Devanagari),
  * composed in the signboard layout pattern:
  *
  *   श्री  JAGANNATH
  *         TRADERS
  */
-function NavbarWordmark({ tone }: { tone: "dark" | "light" }) {
+function BrandWordmark({ tone }: { tone: "dark" | "light" }) {
   const onDark = tone === "light";
   const gold = onDark ? "text-[#f5c518]" : "text-[#c9920a]";
 
@@ -74,8 +74,8 @@ export function Logo({ className, tone = "dark", variant = "default" }: LogoProp
         priority
         aria-hidden
       />
-      {variant === "navbar" ? (
-        <NavbarWordmark tone={tone} />
+      {variant === "brand" ? (
+        <BrandWordmark tone={tone} />
       ) : (
         <span className="flex flex-col leading-none">
           <span className={cn("font-heading text-[0.95rem] font-extrabold tracking-tight", text)}>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "inverse";
 type Size = "md" | "lg";
 
 const base =
@@ -20,6 +20,8 @@ const variants: Record<Variant, string> = {
     "border border-charcoal/20 bg-transparent text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-white active:translate-y-px",
   ghost:
     "bg-white/0 text-charcoal hover:text-steel",
+  inverse:
+    "border border-white/45 bg-transparent text-white hover:border-white hover:bg-white hover:text-charcoal active:translate-y-px",
 };
 
 type ButtonAsLink = {

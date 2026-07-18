@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { ButtonLink } from "@/components/ui/Button";
 import { navLinks, site } from "@/lib/site";
@@ -47,7 +47,7 @@ export function Navbar() {
           aria-label={`${site.name} home`}
           onClick={() => setOpen(false)}
         >
-          <Logo tone={solid ? "dark" : "light"} variant="navbar" />
+          <Logo tone={solid ? "dark" : "light"} variant="brand" />
         </Link>
 
         <ul className="hidden items-center gap-9 lg:flex">
@@ -68,18 +68,8 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={`tel:${site.phoneHref}`}
-            className={cn(
-              "inline-flex items-center gap-2 font-heading text-sm font-semibold transition-colors",
-              solid ? "text-charcoal hover:text-steel" : "text-white",
-            )}
-          >
-            <Phone className="h-4 w-4" strokeWidth={2} />
-            {site.phone}
-          </a>
-          <ButtonLink href="#contact" variant={solid ? "primary" : "secondary"} className={cn(!solid && "border-white/40 text-white hover:bg-white hover:text-charcoal")}>
+        <div className="hidden items-center lg:flex">
+          <ButtonLink href="#contact" variant={solid ? "primary" : "inverse"}>
             Request a Quote
           </ButtonLink>
         </div>
@@ -119,14 +109,7 @@ export function Navbar() {
                   </Link>
                 </li>
               ))}
-              <li className="mt-3 flex flex-col gap-3 pb-2">
-                <a
-                  href={`tel:${site.phoneHref}`}
-                  className="inline-flex items-center gap-2 font-heading text-sm font-semibold text-steel"
-                >
-                  <Phone className="h-4 w-4" />
-                  {site.phone}
-                </a>
+              <li className="mt-3 pb-2">
                 <ButtonLink href="#contact" size="lg" onClick={() => setOpen(false)}>
                   Request a Quote
                 </ButtonLink>

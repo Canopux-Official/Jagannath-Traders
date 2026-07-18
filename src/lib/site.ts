@@ -3,12 +3,15 @@ export const site = {
   shortName: "Jagannath Traders",
   tagline: "Strength That Builds Tomorrow",
   description:
-    "Sri Jagannath Traders supplies high-quality steel products including TMT bars, structural steel, MS pipes, channels, angles, beams and binding wire across Bhadrak and Odisha.",
+    "Sri Jagannath Traders supplies high-quality steel products including stainless steel, ACP sheets, GI pipes, structural angles, channels, GP sheets, roofing sheets and MS pipes across Bhadrak and Odisha.",
   url: "https://srijagannathtraders.com",
   email: "sales@srijagannathtraders.com",
   phone: "+91 94384 58123",
   phoneHref: "+919438458123",
   whatsapp: "+91 94384 58123",
+  /** Digits only — used for wa.me enquiry links */
+  whatsappHref: "919438458123",
+  gstin: "21CN0PD1678L1ZS",
   address: {
     street: "Bonth Chhak, Near Ape Auto Showroom",
     locality: "Bhadrak",
@@ -27,7 +30,7 @@ export const site = {
     instagram: "https://instagram.com",
     youtube: "https://youtube.com",
   },
-  founded: 2009,
+  founded: 2019,
 } as const;
 
 export const navLinks = [
