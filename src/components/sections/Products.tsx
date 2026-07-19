@@ -40,7 +40,7 @@ export function Products() {
                     </p>
                   </div>
                   <Link
-                    href={`/?product=${encodeURIComponent(product.title)}#contact`}
+                    href={`/contact?product=${encodeURIComponent(product.title)}`}
                     className="mt-auto inline-flex h-10 w-fit items-center justify-center rounded-sm border border-charcoal/15 bg-transparent px-4 font-heading text-sm font-semibold text-charcoal transition-all duration-300 ease-smooth hover:border-steel hover:bg-steel hover:text-white"
                   >
                     Request a Quote

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
@@ -10,6 +11,8 @@ import { navLinks, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -27,7 +30,11 @@ export function Navbar() {
     };
   }, [open]);
 
-  const solid = scrolled || open;
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const solid = !isHome || scrolled || open;
 
   return (
     <header
@@ -43,7 +50,7 @@ export function Navbar() {
         className="container-grid flex h-16 items-center justify-between gap-6 lg:h-20"
       >
         <Link
-          href="#top"
+          href="/"
           aria-label={`${site.name} home`}
           onClick={() => setOpen(false)}
         >
@@ -58,7 +65,9 @@ export function Navbar() {
                 className={cn(
                   "font-heading text-sm font-medium transition-colors",
                   solid
-                    ? "text-charcoal/80 hover:text-steel"
+                    ? pathname === link.href
+                      ? "text-steel"
+                      : "text-charcoal/80 hover:text-steel"
                     : "text-white/85 hover:text-white",
                 )}
               >
@@ -69,7 +78,7 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center lg:flex">
-          <ButtonLink href="#contact" variant={solid ? "primary" : "inverse"}>
+          <ButtonLink href="/contact" variant={solid ? "primary" : "inverse"}>
             Request a Quote
           </ButtonLink>
         </div>
@@ -103,14 +112,17 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block py-3.5 font-heading text-lg font-semibold text-charcoal"
+                    className={cn(
+                      "block py-3.5 font-heading text-lg font-semibold",
+                      pathname === link.href ? "text-steel" : "text-charcoal",
+                    )}
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
               <li className="mt-3 pb-2">
-                <ButtonLink href="#contact" size="lg" onClick={() => setOpen(false)}>
+                <ButtonLink href="/contact" size="lg" onClick={() => setOpen(false)}>
                   Request a Quote
                 </ButtonLink>
               </li>

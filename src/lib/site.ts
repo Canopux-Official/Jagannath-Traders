@@ -34,9 +34,14 @@ export const site = {
 } as const;
 
 export const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Industries", href: "#industries" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Products", href: "/products" },
+  { label: "Industries", href: "/industries" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact", href: "/contact" },
+] as const;
+
+export const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
 ] as const;

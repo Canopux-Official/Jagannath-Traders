@@ -176,6 +176,24 @@ export type GalleryItem = {
 
 export const gallery: GalleryItem[] = [
   {
+    image: img("gallery/Steel-1.jpg"),
+    alt: "Steel sections and profiles stocked on the workshop floor",
+    span: "tall",
+  },
+  {
+    image: img("gallery/Steel-2.jpg"),
+    alt: "MS pipes and hollow sections organised on warehouse racks",
+    span: "tall",
+  },
+  {
+    image: img("gallery/Steel-3.jpg"),
+    alt: "Colour range of corrugated roofing and cladding sheets on display",
+  },
+  {
+    image: img("gallery/Steel-4.jpg"),
+    alt: "Structural angles and rectangular hollow sections stacked for dispatch",
+  },
+  {
     image: img("steel-bars-yard.jpg"),
     alt: "Steel bars stacked in an industrial yard",
     span: "tall",
@@ -191,10 +209,6 @@ export const gallery: GalleryItem[] = [
   {
     image: img("gallery/gallery-corrugated-sheets.jpg"),
     alt: "Profiled metal roofing sheets stacked at the yard",
-  },
-  {
-    image: img("steel-frame.jpg"),
-    alt: "Steel frame structure under construction",
   },
   {
     image: img("gallery/gallery-angle-bars.jpg"),
@@ -218,17 +232,8 @@ export const gallery: GalleryItem[] = [
     alt: "Warehouse interior stocked with metal supplies and hardware",
   },
   {
-    image: img("beams-aerial.jpg"),
-    alt: "Structural steel beams viewed from above",
-    span: "tall",
-  },
-  {
     image: img("gallery/gallery-hpl-panels.jpg"),
     alt: "HPL cladding panels stored at the distribution yard",
-  },
-  {
-    image: img("welding-bw.jpg"),
-    alt: "Workers welding on a steel structure",
   },
   {
     image: img("about.jpg"),

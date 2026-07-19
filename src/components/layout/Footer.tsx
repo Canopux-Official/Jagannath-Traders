@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Facebook, Linkedin, Instagram, Youtube, MapPin, Phone, Mail, FileText } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
-import { navLinks, site } from "@/lib/site";
+import { navLinks, legalLinks, site } from "@/lib/site";
 import { products } from "@/lib/content";
 
 const socials = [
@@ -66,7 +66,7 @@ export function Footer() {
                 {products.slice(0, 6).map((p) => (
                   <li key={p.title}>
                     <Link
-                      href="#products"
+                      href={`/contact?product=${encodeURIComponent(p.title)}`}
                       className="text-sm text-white/70 transition-colors hover:text-white"
                     >
                       {p.title}
@@ -122,9 +122,17 @@ export function Footer() {
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p className="text-xs text-white/40">
-            Premium steel distribution · Bhadrak, Odisha
-          </p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/40">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </Container>
     </footer>

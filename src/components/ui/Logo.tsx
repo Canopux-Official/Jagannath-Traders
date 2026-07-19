@@ -12,11 +12,11 @@ type LogoProps = {
 const toneTransition = "transition-colors duration-300 ease-smooth";
 
 /**
- * Brand wordmark — same type system as the site (Manrope + Devanagari),
- * composed in the signboard layout pattern:
+ * Brand wordmark — stacked signboard composition:
  *
- *   श्री  JAGANNATH
- *         TRADERS
+ *        ଶ୍ରୀ
+ *     Jagannath
+ *      TRADERS
  */
 function BrandWordmark({ tone }: { tone: "dark" | "light" }) {
   const onDark = tone === "light";
@@ -24,33 +24,33 @@ function BrandWordmark({ tone }: { tone: "dark" | "light" }) {
 
   return (
     <span
-      className="inline-grid grid-cols-[auto_1fr] items-end gap-x-2 gap-y-1 leading-none"
+      className="inline-flex flex-col items-center leading-none"
       aria-label="Sri Jagannath Traders"
     >
       <span
-        lang="hi"
+        lang="or"
         className={cn(
-          "col-start-1 row-start-1 self-end pb-px font-devanagari text-[0.8rem] font-semibold leading-none",
+          "font-odia text-[0.7rem] font-normal leading-none",
           toneTransition,
           gold,
         )}
       >
-        श्री
+        ଶ୍ରୀ
       </span>
       <span
         className={cn(
-          "col-start-2 row-start-1 font-heading text-[0.95rem] font-extrabold uppercase tracking-[0.03em] leading-none",
+          "mt-0.5 font-signature text-[1.85rem] font-normal leading-none tracking-normal",
           toneTransition,
           onDark ? "text-white" : "text-charcoal",
         )}
       >
-        JAGANNATH
+        Jagannath
       </span>
       <span
         className={cn(
-          "col-start-2 row-start-2 font-heading text-[0.65rem] font-semibold uppercase tracking-eyebrow leading-none",
+          "mt-1 font-heading text-[0.58rem] font-semibold uppercase tracking-[0.28em] leading-none",
           toneTransition,
-          onDark ? "text-white/55" : "text-ink/50",
+          gold,
         )}
       >
         TRADERS

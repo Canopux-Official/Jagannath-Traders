@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope, Noto_Sans_Devanagari } from "next/font/google";
+import { Great_Vibes, Inter, Manrope, Noto_Sans_Oriya } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -11,11 +11,11 @@ const manrope = Manrope({
   weight: ["500", "600", "700", "800"],
 });
 
-const notoDevanagari = Noto_Sans_Devanagari({
-  subsets: ["devanagari"],
+const notoOriya = Noto_Sans_Oriya({
+  subsets: ["oriya"],
   display: "swap",
-  variable: "--font-devanagari",
-  weight: ["600", "700"],
+  variable: "--font-odia",
+  weight: ["400", "500", "600"],
 });
 
 const inter = Inter({
@@ -23,6 +23,13 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
   weight: ["400", "500", "600"],
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-signature",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -77,7 +84,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable} ${notoDevanagari.variable}`}>
+    <html
+      lang="en"
+      className={`${manrope.variable} ${inter.variable} ${notoOriya.variable} ${greatVibes.variable}`}
+    >
       <body>
         <JsonLd />
         <a

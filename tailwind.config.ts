@@ -21,7 +21,8 @@ const config: Config = {
       fontFamily: {
         heading: ["var(--font-manrope)", "system-ui", "sans-serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
-        devanagari: ["var(--font-devanagari)", "sans-serif"],
+        odia: ["var(--font-odia)", "sans-serif"],
+        signature: ["var(--font-signature)", "cursive", "serif"],
       },
       fontSize: {
         "display": ["clamp(2.75rem, 6vw, 5.25rem)", { lineHeight: "1.02", letterSpacing: "-0.03em" }],

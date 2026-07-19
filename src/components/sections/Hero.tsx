@@ -118,7 +118,7 @@ export function Hero() {
               {featured.map((item) => (
                 <li key={item.name}>
                   <Link
-                    href="#products"
+                    href="/products"
                     className="group flex items-center justify-between gap-4 border-b border-white/15 py-4 transition-colors hover:border-white/40"
                   >
                     <span className="flex items-baseline gap-4">
@@ -204,7 +204,7 @@ export function Hero() {
             </dl>
 
             <Link
-              href="#products"
+              href="/products"
               className="group inline-flex items-center gap-2.5 font-heading text-xs font-semibold uppercase tracking-eyebrow text-white/70 transition-colors hover:text-white"
             >
               Explore our products
