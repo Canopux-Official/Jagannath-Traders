@@ -4,7 +4,7 @@ export const site = {
   tagline: "Strength That Builds Tomorrow",
   description:
     "Sri Jagannath Traders is a trusted steel supplier and distributor in Bhadrak, Odisha, stocking stainless steel, mild steel, structural steel, ACP sheets, GI pipes, MS pipes, GP sheets, roofing sheets, angles and channels.",
-  url: "https://srijagannathtraders.com",
+  url: "https://www.srijagannathtraders.in",
   email: "sales@srijagannathtraders.in",
   phone: "+91 94384 58123",
   phoneHref: "+919438458123",

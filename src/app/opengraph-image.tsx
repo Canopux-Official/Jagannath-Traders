@@ -70,7 +70,7 @@ export default function OpenGraphImage() {
           }}
         >
           <span>Steel · Stainless · Mild Steel · Structural</span>
-          <span>srijagannathtraders.com</span>
+          <span>www.srijagannathtraders.in</span>
         </div>
       </div>
     ),
