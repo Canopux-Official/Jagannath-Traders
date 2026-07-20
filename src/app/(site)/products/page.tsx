@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Products } from "@/components/sections/Products";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Products",
+export const metadata: Metadata = createPageMetadata({
+  title: "Steel Products in Bhadrak",
   description:
-    "Browse stainless steel, ACP sheets, GI pipes, structural angles and channels, GP sheets, roofing sheets and MS pipes from Sri Jagannath Traders.",
-};
+    "Browse steel products in Bhadrak — stainless steel, mild steel pipes, structural steel angles and channels, ACP sheets, GI pipes, GP sheets and roofing sheets from Sri Jagannath Traders.",
+  path: "/products",
+});
 
 export default function ProductsPage() {
   return (
     <div className="pt-20 lg:pt-24">
-      <Products />
+      <Products headingAs="h1" />
     </div>
   );
 }

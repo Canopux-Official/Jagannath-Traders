@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Terms of Service",
-  description: `Terms of service for ${site.name}.`,
-};
+  description: `Terms for using the ${site.name} website, product information and quotation process in Bhadrak, Odisha.`,
+  path: "/terms-of-service",
+});
 
 export default function TermsOfServicePage() {
   return (

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: `Privacy policy for ${site.name}.`,
-};
+  description: `How ${site.name} collects and uses enquiry information for quotations and customer communication in Bhadrak, Odisha.`,
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

@@ -75,11 +75,21 @@ export function Hero() {
               animate="show"
               className="mt-7 max-w-3xl text-display font-extrabold text-white text-balance"
             >
-              {site.tagline}
+              {site.name}
             </motion.h1>
 
             <motion.p
               custom={2}
+              variants={fadeUp}
+              initial="hidden"
+              animate="show"
+              className="mt-5 max-w-2xl font-heading text-2xl font-semibold tracking-tight text-white/90 text-balance sm:text-3xl"
+            >
+              {site.tagline}
+            </motion.p>
+
+            <motion.p
+              custom={3}
               variants={fadeUp}
               initial="hidden"
               animate="show"
@@ -92,7 +102,7 @@ export function Hero() {
             </motion.p>
 
             <motion.p
-              custom={3}
+              custom={4}
               variants={fadeUp}
               initial="hidden"
               animate="show"
@@ -105,7 +115,7 @@ export function Hero() {
 
           {/* Right: featured product index */}
           <motion.div
-            custom={4}
+            custom={5}
             variants={fadeUp}
             initial="hidden"
             animate="show"

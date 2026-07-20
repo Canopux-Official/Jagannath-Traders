@@ -9,10 +9,12 @@ import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
+import { FaqJsonLd } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
   return (
     <>
+      <FaqJsonLd />
       <Hero />
       <Brands />
       <About />

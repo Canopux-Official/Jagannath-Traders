@@ -6,12 +6,21 @@ import { navLinks, legalLinks, site } from "@/lib/site";
 import { products } from "@/lib/content";
 import { productSlug } from "@/lib/utils";
 
-const socials = [
-  { label: "Facebook", href: site.social.facebook, icon: Facebook },
-  { label: "LinkedIn", href: site.social.linkedin, icon: Linkedin },
-  { label: "Instagram", href: site.social.instagram, icon: Instagram },
-  { label: "YouTube", href: site.social.youtube, icon: Youtube },
-];
+const socialIcons = {
+  facebook: Facebook,
+  linkedin: Linkedin,
+  instagram: Instagram,
+  youtube: Youtube,
+} as const;
+
+const socials = (
+  [
+    { label: "Facebook", href: site.social.facebook, key: "facebook" },
+    { label: "LinkedIn", href: site.social.linkedin, key: "linkedin" },
+    { label: "Instagram", href: site.social.instagram, key: "instagram" },
+    { label: "YouTube", href: site.social.youtube, key: "youtube" },
+  ] as const
+).filter((s) => Boolean(s.href));
 
 export function Footer() {
   return (
@@ -24,20 +33,25 @@ export function Footer() {
               Trusted supplier of premium steel products serving builders,
               contractors and industries across Odisha since {site.founded}.
             </p>
-            <div className="mt-6 flex items-center gap-2">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="grid h-10 w-10 place-items-center rounded-sm border border-white/15 text-white/70 transition-colors hover:border-white/40 hover:text-white"
-                >
-                  <s.icon className="h-[1.05rem] w-[1.05rem]" strokeWidth={1.75} />
-                </a>
-              ))}
-            </div>
+            {socials.length > 0 ? (
+              <div className="mt-6 flex items-center gap-2">
+                {socials.map((s) => {
+                  const Icon = socialIcons[s.key];
+                  return (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={s.label}
+                      className="grid h-10 w-10 place-items-center rounded-sm border border-white/15 text-white/70 transition-colors hover:border-white/40 hover:text-white"
+                    >
+                      <Icon className="h-[1.05rem] w-[1.05rem]" strokeWidth={1.75} />
+                    </a>
+                  );
+                })}
+              </div>
+            ) : null}
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-8 lg:grid-cols-3">

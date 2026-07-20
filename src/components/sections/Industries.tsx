@@ -3,15 +3,20 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { industries } from "@/lib/content";
 
-export function Industries() {
+type IndustriesProps = {
+  headingAs?: "h1" | "h2";
+};
+
+export function Industries({ headingAs = "h2" }: IndustriesProps) {
   return (
     <section id="industries" className="bg-charcoal py-section text-white">
       <Container>
         <SectionHeading
+          as={headingAs}
           eyebrow="Industries We Serve"
           title="Supplying steel across every sector"
           description="From homes to highways, our material supports the projects that move Odisha forward."
-          className="[&_.eyebrow]:text-steel-light [&_h2]:text-white [&_p]:text-white/65"
+          className="[&_.eyebrow]:text-steel-light [&_h1]:text-white [&_h2]:text-white [&_p]:text-white/65"
         />
 
         <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">

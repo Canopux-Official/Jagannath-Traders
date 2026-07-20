@@ -5,7 +5,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ContactForm } from "./ContactForm";
 import { site } from "@/lib/site";
 
-export function Contact() {
+type ContactProps = {
+  headingAs?: "h1" | "h2";
+};
+
+export function Contact({ headingAs = "h2" }: ContactProps) {
   const mapsQuery = `${site.coordinates.lat},${site.coordinates.lng}`;
 
   return (
@@ -14,6 +18,7 @@ export function Contact() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <SectionHeading
+              as={headingAs}
               eyebrow="Contact"
               title="Request a quote"
               description="Share your requirement and our team will respond promptly with pricing and availability."

@@ -13,7 +13,13 @@ const commitments = [
   "Timely delivery, every order",
 ];
 
-export function About() {
+type AboutProps = {
+  headingAs?: "h1" | "h2";
+};
+
+export function About({ headingAs = "h2" }: AboutProps) {
+  const HeadingTag = headingAs;
+
   return (
     <section id="about" className="bg-white py-section">
       <Container>
@@ -42,9 +48,9 @@ export function About() {
               </p>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="text-h2 font-bold text-balance">
+              <HeadingTag className="text-h2 font-bold text-balance">
                 A steel partner builders and industries rely on
-              </h2>
+              </HeadingTag>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-base leading-relaxed text-ink/70 text-pretty sm:text-lg">

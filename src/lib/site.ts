@@ -3,7 +3,7 @@ export const site = {
   shortName: "Jagannath Traders",
   tagline: "Strength That Builds Tomorrow",
   description:
-    "Sri Jagannath Traders supplies high-quality steel products including stainless steel, ACP sheets, GI pipes, structural angles, channels, GP sheets, roofing sheets and MS pipes across Bhadrak and Odisha.",
+    "Sri Jagannath Traders is a trusted steel supplier and distributor in Bhadrak, Odisha — stocking stainless steel, mild steel, structural steel, ACP sheets, GI pipes, MS pipes, GP sheets, roofing sheets, angles and channels.",
   url: "https://srijagannathtraders.com",
   email: "sales@srijagannathtraders.in",
   phone: "+91 94384 58123",
@@ -24,11 +24,15 @@ export const site = {
     lng: 86.4935639,
   },
   hours: [{ days: "Everyday", time: "9:00 AM – 8:00 PM" }],
+  /**
+   * Official social profiles only. Leave empty until real URLs exist —
+   * empty values are omitted from schema `sameAs` and the footer.
+   */
   social: {
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    instagram: "https://instagram.com",
-    youtube: "https://youtube.com",
+    facebook: "",
+    linkedin: "",
+    instagram: "",
+    youtube: "",
   },
   founded: 2019,
 } as const;

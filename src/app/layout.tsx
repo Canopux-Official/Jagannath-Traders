@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Great_Vibes, Inter, Manrope, Noto_Sans_Oriya } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
-import { JsonLd } from "@/components/seo/JsonLd";
+import { SiteJsonLd } from "@/components/seo/JsonLd";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -32,26 +32,40 @@ const greatVibes = Great_Vibes({
   weight: "400",
 });
 
+const homeTitle = `${site.name} | Premium Steel Distributor in Bhadrak`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Premium Steel Distributor in Bhadrak`,
+    default: homeTitle,
     template: `%s | ${site.name}`,
   },
   description: site.description,
   keywords: [
+    "steel",
+    "steel products Bhadrak",
     "steel distributor Bhadrak",
+    "steel supplier Bhadrak",
+    "steel supplier Odisha",
+    "steel shop Bhadrak",
+    "mild steel Bhadrak",
+    "structural steel Odisha",
+    "stainless steel Bhadrak",
     "stainless steel Odisha",
+    "MS steel pipes Bhadrak",
     "ACP sheets Bhadrak",
-    "GI pipes",
-    "structural angles channels",
-    "GP sheets",
-    "roofing sheets",
-    "MS pipes",
+    "GI pipes Bhadrak",
+    "MS pipes Bhadrak",
+    "GP sheets Bhadrak",
+    "roofing sheets Bhadrak",
+    "structural angles Odisha",
+    "structural channels Bhadrak",
     "Sri Jagannath Traders",
   ],
   authors: [{ name: site.name }],
   creator: site.name,
+  publisher: site.name,
+  category: "business",
   alternates: {
     canonical: "/",
   },
@@ -60,17 +74,24 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: site.url,
     siteName: site.name,
-    title: `${site.name} | Premium Steel Distributor in Bhadrak`,
+    title: homeTitle,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} | Premium Steel Distributor in Bhadrak`,
+    title: homeTitle,
     description: site.description,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -89,7 +110,7 @@ export default function RootLayout({
       className={`${manrope.variable} ${inter.variable} ${notoOriya.variable} ${greatVibes.variable}`}
     >
       <body>
-        <JsonLd />
+        <SiteJsonLd />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-sm focus:bg-charcoal focus:px-4 focus:py-2 focus:text-sm focus:text-white"

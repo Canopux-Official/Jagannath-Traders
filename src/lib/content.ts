@@ -314,7 +314,7 @@ export const faqs: Faq[] = [
   {
     question: "Which steel products do you stock?",
     answer:
-      "We supply stainless steel pipes and sheets (Grade 202 & 304), ACP sheets, GI pipes, structural angles, structural channels, GP sheets, roofing sheets and MS pipes. For specific sizes and grades, please contact us.",
+      "We supply a full range of steel products — stainless steel pipes and sheets (Grade 202 & 304), mild steel (MS) pipes, structural steel angles and channels, ACP sheets, GI pipes, GP sheets and roofing sheets. For specific sizes and grades, please contact us.",
   },
   {
     question: "How is pricing determined?",

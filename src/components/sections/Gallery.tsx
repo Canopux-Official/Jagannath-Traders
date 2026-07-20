@@ -5,11 +5,16 @@ import { SafeImage } from "@/components/ui/SafeImage";
 import { gallery } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
-export function Gallery() {
+type GalleryProps = {
+  headingAs?: "h1" | "h2";
+};
+
+export function Gallery({ headingAs = "h2" }: GalleryProps) {
   return (
     <section id="gallery" className="bg-white py-section">
       <Container>
         <SectionHeading
+          as={headingAs}
           eyebrow="Gallery"
           title="Inside our operations"
           description="Warehousing, inventory and logistics built to keep large orders moving."

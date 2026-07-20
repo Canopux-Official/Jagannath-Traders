@@ -6,15 +6,20 @@ import { SafeImage } from "@/components/ui/SafeImage";
 import { products } from "@/lib/content";
 import { productSlug } from "@/lib/utils";
 
-export function Products() {
+type ProductsProps = {
+  headingAs?: "h1" | "h2";
+};
+
+export function Products({ headingAs = "h2" }: ProductsProps) {
   return (
     <section id="products" className="bg-mist py-section">
       <Container>
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading
+            as={headingAs}
             eyebrow="Product Range"
             title="Steel products for construction and industry"
-            description="A ready-stock range of stainless steel, pipes, sheets and structural sections for builders, fabricators and contractors across Odisha."
+            description="A ready-stock steel range — stainless steel, mild steel pipes, sheets and structural sections for builders, fabricators and contractors across Odisha."
           />
         </div>
 
