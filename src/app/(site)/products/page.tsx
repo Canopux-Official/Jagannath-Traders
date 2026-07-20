@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Steel Products in Bhadrak",
   description:
-    "Browse steel products in Bhadrak — stainless steel, mild steel pipes, structural steel angles and channels, ACP sheets, GI pipes, GP sheets and roofing sheets from Sri Jagannath Traders.",
+    "Browse steel products in Bhadrak, stainless steel, mild steel pipes, structural steel angles and channels, ACP sheets, GI pipes, GP sheets and roofing sheets from Sri Jagannath Traders.",
   path: "/products",
 });
 

@@ -96,7 +96,7 @@ export function Hero() {
               className="mt-7 max-w-xl text-lg leading-relaxed text-white/75 text-pretty"
             >
               Since {site.founded}, Sri Jagannath Traders has supplied dependable,
-              certified steel to the projects shaping Odisha — combining deep mill
+              certified steel to the projects shaping Odisha, combining deep mill
               relationships with disciplined logistics and a standard of service
               that builders return to.
             </motion.p>

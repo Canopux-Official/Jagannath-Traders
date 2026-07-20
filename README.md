@@ -1,8 +1,8 @@
-# Sri Jagannath Traders — Corporate Website
+# Sri Jagannath Traders, Corporate Website
 
 A premium, single-page corporate website for **Sri Jagannath Traders**, a steel
 distributor based in Bhadrak, Odisha. Built with an editorial, industrial design
-language inspired by global steel majors — clean, minimal and confident.
+language inspired by global steel majors, clean, minimal and confident.
 
 ## Tech Stack
 

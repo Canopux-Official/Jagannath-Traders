@@ -57,7 +57,7 @@ export function About({ headingAs = "h2" }: AboutProps) {
                 Sri Jagannath Traders has supplied premium steel to the
                 construction and industrial sector across Bhadrak and Odisha since{" "}
                 {site.founded}. We combine deep mill relationships with a
-                disciplined approach to quality, stock and logistics — so your
+                disciplined approach to quality, stock and logistics, so your
                 project never waits on material.
               </p>
             </Reveal>

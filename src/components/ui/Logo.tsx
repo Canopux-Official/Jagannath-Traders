@@ -5,14 +5,14 @@ type LogoProps = {
   className?: string;
   /** Adjusts wordmark colour for light or dark backgrounds. */
   tone?: "dark" | "light";
-  /** Brand wordmark layout — header and footer. */
+  /** Brand wordmark layout, header and footer. */
   variant?: "default" | "brand";
 };
 
 const toneTransition = "transition-colors duration-300 ease-smooth";
 
 /**
- * Brand wordmark — stacked signboard composition:
+ * Brand wordmark, stacked signboard composition:
  *
  *        ଶ୍ରୀ
  *     Jagannath

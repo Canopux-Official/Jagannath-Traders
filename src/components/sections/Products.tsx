@@ -19,7 +19,7 @@ export function Products({ headingAs = "h2" }: ProductsProps) {
             as={headingAs}
             eyebrow="Product Range"
             title="Steel products for construction and industry"
-            description="A ready-stock steel range — stainless steel, mild steel pipes, sheets and structural sections for builders, fabricators and contractors across Odisha."
+            description="A ready-stock steel range, stainless steel, mild steel pipes, sheets and structural sections for builders, fabricators and contractors across Odisha."
           />
         </div>
 

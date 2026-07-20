@@ -9,7 +9,7 @@ function socialProfiles(): string[] {
   return Object.values(site.social).filter((url) => Boolean(url));
 }
 
-/** Core business entity graph — safe to render on every page. */
+/** Core business entity graph, safe to render on every page. */
 export function SiteJsonLd() {
   const localBusiness = {
     "@context": "https://schema.org",
@@ -130,7 +130,7 @@ export function SiteJsonLd() {
   );
 }
 
-/** FAQ rich results — homepage only (where FAQ content is visible). */
+/** FAQ rich results, homepage only (where FAQ content is visible). */
 export function FaqJsonLd() {
   const faqPage = {
     "@context": "https://schema.org",
@@ -154,7 +154,7 @@ export function FaqJsonLd() {
   );
 }
 
-/** @deprecated Prefer SiteJsonLd — kept for compatibility during migrate. */
+/** @deprecated Prefer SiteJsonLd, kept for compatibility during migrate. */
 export function JsonLd() {
   return <SiteJsonLd />;
 }

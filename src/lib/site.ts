@@ -3,13 +3,13 @@ export const site = {
   shortName: "Jagannath Traders",
   tagline: "Strength That Builds Tomorrow",
   description:
-    "Sri Jagannath Traders is a trusted steel supplier and distributor in Bhadrak, Odisha — stocking stainless steel, mild steel, structural steel, ACP sheets, GI pipes, MS pipes, GP sheets, roofing sheets, angles and channels.",
+    "Sri Jagannath Traders is a trusted steel supplier and distributor in Bhadrak, Odisha, stocking stainless steel, mild steel, structural steel, ACP sheets, GI pipes, MS pipes, GP sheets, roofing sheets, angles and channels.",
   url: "https://srijagannathtraders.com",
   email: "sales@srijagannathtraders.in",
   phone: "+91 94384 58123",
   phoneHref: "+919438458123",
   whatsapp: "+91 94384 58123",
-  /** Digits only — used for wa.me enquiry links */
+  /** Digits only, used for wa.me enquiry links */
   whatsappHref: "919438458123",
   gstin: "21CN0PD1678L1ZS",
   address: {
@@ -25,7 +25,7 @@ export const site = {
   },
   hours: [{ days: "Everyday", time: "9:00 AM – 8:00 PM" }],
   /**
-   * Official social profiles only. Leave empty until real URLs exist —
+   * Official social profiles only. Leave empty until real URLs exist;
    * empty values are omitted from schema `sameAs` and the footer.
    */
   social: {
