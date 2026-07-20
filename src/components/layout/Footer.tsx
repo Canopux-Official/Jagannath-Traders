@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { navLinks, legalLinks, site } from "@/lib/site";
 import { products } from "@/lib/content";
+import { productSlug } from "@/lib/utils";
 
 const socials = [
   { label: "Facebook", href: site.social.facebook, icon: Facebook },
@@ -63,10 +64,10 @@ export function Footer() {
                 Products
               </h3>
               <ul className="mt-5 space-y-3">
-                {products.slice(0, 6).map((p) => (
+                {products.map((p) => (
                   <li key={p.title}>
                     <Link
-                      href={`/contact?product=${encodeURIComponent(p.title)}`}
+                      href={`/products#${productSlug(p.title)}`}
                       className="text-sm text-white/70 transition-colors hover:text-white"
                     >
                       {p.title}

@@ -5,7 +5,7 @@ export const site = {
   description:
     "Sri Jagannath Traders supplies high-quality steel products including stainless steel, ACP sheets, GI pipes, structural angles, channels, GP sheets, roofing sheets and MS pipes across Bhadrak and Odisha.",
   url: "https://srijagannathtraders.com",
-  email: "sales@srijagannathtraders.com",
+  email: "sales@srijagannathtraders.in",
   phone: "+91 94384 58123",
   phoneHref: "+919438458123",
   whatsapp: "+91 94384 58123",

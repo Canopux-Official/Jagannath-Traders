@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { SafeImage } from "@/components/ui/SafeImage";
 import { products } from "@/lib/content";
+import { productSlug } from "@/lib/utils";
 
 export function Products() {
   return (
@@ -20,7 +21,10 @@ export function Products() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, i) => (
             <Reveal key={product.title} delay={(i % 3) * 0.06}>
-              <div className="group relative flex h-full flex-col overflow-hidden rounded-sm border border-black/10 bg-white shadow-card transition-all duration-300 ease-smooth hover:-translate-y-1 hover:shadow-lift">
+              <div
+                id={productSlug(product.title)}
+                className="group relative flex h-full scroll-mt-28 flex-col overflow-hidden rounded-sm border border-black/10 bg-white shadow-card transition-all duration-300 ease-smooth hover:-translate-y-1 hover:shadow-lift lg:scroll-mt-32"
+              >
                 <div className="relative aspect-[16/11] w-full overflow-hidden bg-mist">
                   <SafeImage
                     src={product.image}

@@ -42,15 +42,15 @@ export const products: Product[] = [
     title: "Stainless Steel",
     description:
       "Pipes and sheets in Grade 202 and Grade 304 for durable fabrication, kitchen and industrial use.",
-    image: img("pipes.jpg"),
-    alt: "Stainless steel pipes and sections in stock",
+    image: img("stainless-steel-pipes.webp"),
+    alt: "Stainless steel pipes in Grade 202 and Grade 304",
   },
   {
     title: "ACP Sheets",
     description:
       "Aluminium composite panels for cladding, signage and modern building façades.",
-    image: img("gallery/gallery-hpl-panels.jpg"),
-    alt: "ACP and cladding panels stored at the yard",
+    image: img("acp-sheets.jpg"),
+    alt: "ACP sheets for cladding and building façades",
   },
   {
     title: "GI Pipes",
@@ -70,29 +70,29 @@ export const products: Product[] = [
     title: "Structural Channels",
     description:
       "Precision-rolled channels for durable industrial and building frameworks.",
-    image: img("warehouse-beams.jpg"),
-    alt: "Structural channels and steel sections in storage",
+    image: img("structural-channel.webp"),
+    alt: "Structural steel channels ready for dispatch",
   },
   {
     title: "GP Sheets",
     description:
       "Galvanised plain sheets for roofing, ducting, fabrication and industrial use.",
-    image: img("gallery/gallery-warehouse-stock.jpg"),
-    alt: "Galvanised steel sheets in warehouse stock",
+    image: img("gp-sheet.jpg"),
+    alt: "Galvanised plain sheets in stock",
   },
   {
     title: "Roofing Sheets",
     description:
       "Profiled roofing sheets for residential, commercial and industrial buildings.",
-    image: img("gallery/gallery-corrugated-sheets.jpg"),
-    alt: "Corrugated roofing sheets stacked at the yard",
+    image: img("roofing-sheet.jpg"),
+    alt: "Profiled roofing sheets stacked at the yard",
   },
   {
     title: "MS Pipes",
     description:
       "Mild steel pipes for plumbing, scaffolding, fabrication and general construction.",
-    image: img("steel-bars-yard.jpg"),
-    alt: "Mild steel pipes and sections at the steel yard",
+    image: img("ms-pipes.jpg"),
+    alt: "Mild steel pipes stacked for plumbing and fabrication",
   },
 ];
 
