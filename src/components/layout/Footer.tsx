@@ -26,7 +26,7 @@ const socials = (
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-charcoal text-white">
-      <Container className="py-16 lg:py-20">
+      <Container className="pb-8 pt-16 lg:pb-10 lg:pt-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Logo tone="light" variant="brand" />
@@ -134,23 +134,24 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-end">
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <div className="flex flex-col items-start gap-3 sm:items-end">
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/40">
-              {legalLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="transition-colors hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-            <p className="flex items-center gap-2 text-xs text-white/50">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/40">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <span>
+              Bonth Chhak · {site.address.locality} · {site.address.region}
+            </span>
+            <span className="inline-flex items-center gap-2 text-white/50">
               <span>Maintained by</span>
               <a
                 href="https://canopux.org"
@@ -164,10 +165,10 @@ export function Footer() {
                   alt="Canopux"
                   width={96}
                   height={24}
-                  className="h-5 w-auto"
+                  className="h-4 w-auto"
                 />
               </a>
-            </p>
+            </span>
           </div>
         </div>
       </Container>
