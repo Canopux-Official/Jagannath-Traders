@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Linkedin, Instagram, Youtube, MapPin, Phone, Mail, FileText } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
@@ -133,20 +134,40 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center">
+        <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-end">
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/40">
-            {legalLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="transition-colors hover:text-white"
+          <div className="flex flex-col items-start gap-3 sm:items-end">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/40">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <p className="flex items-center gap-2 text-xs text-white/50">
+              <span>Maintained by</span>
+              <a
+                href="https://canopux.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Canopux"
+                className="inline-flex items-center opacity-80 transition-opacity hover:opacity-100"
               >
-                {link.label}
-              </Link>
-            ))}
+                <Image
+                  src="/CANOPUX.png"
+                  alt="Canopux"
+                  width={96}
+                  height={24}
+                  className="h-5 w-auto"
+                />
+              </a>
+            </p>
           </div>
         </div>
       </Container>
